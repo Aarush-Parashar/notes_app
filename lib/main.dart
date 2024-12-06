@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/secrets.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await Supabase.initialize(
-    url: 'https://ppskmbqrlznqijuesagg.supabase.co',
-    anonKey:
-        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBwc2ttYnFybHpucWlqdWVzYWdnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM0NzU3NzEsImV4cCI6MjA0OTA1MTc3MX0.sNstUm4hBOMwWx4zOb9rOqCxwikBoyC5L8fbzBKrP7U',
-  );
+  await Supabase.initialize(url: url, anonKey: anonKey);
   runApp(const MyApp());
 }
 
